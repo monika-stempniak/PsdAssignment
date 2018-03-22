@@ -1,0 +1,109 @@
+.form {
+  @include flex-box(initial, center);
+  flex-direction: column;
+
+  .form-email {
+    border-bottom: 2px solid $color-form;
+    width: 367px;
+    margin-bottom: 23px;
+    @include flex-box(flex-start, center);
+    padding: 0 0 9px 6px;
+    position: relative;
+
+    @include mobile300 {
+      width: 227px;
+      margin-bottom: 13px;
+    }
+
+    @include mobile400 {
+      width: 327px;
+      margin-bottom: 18px;
+    }
+
+    .email-icon {
+      display: block;
+      margin-right: 11px;
+    }
+
+    input[type="text"] {
+      border: none;
+      outline: none;
+      padding-right: 7px;
+      flex: 1;
+      font-size: 18px;
+      font-family: $font-lato;
+      color: $color-title;
+      line-height: 1.2;
+      height: 17px;
+      transform: scale(1.02, 1);
+
+      @include mobile300 {
+        font-size: 15px;
+      }
+
+      @include mobile400 {
+        font-size: 17px;
+      }
+    }
+
+    .error-message {
+      position: absolute;
+      top: 16px;
+      left: 34px;
+      font-size: 8px;
+      color: red;
+    }
+  }
+
+  .form-btn {
+    border-radius: 8px;
+    @include linearGradient( 90deg, rgb(181,100,210) 0%, rgb(199,109,215) 99%);
+    @include boxShadow(0px, 4px, 25px, 0px, rgba(144, 19, 254, 0.56));
+    width: 381px;
+    height: 52px;
+    color: $color-box;
+    font-family: $font-lato;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-bottom: 59px;
+    transform: scale(1.02, 1);
+
+    &:hover {
+      @include linearGradient( 90deg, darken(rgb(181,100,210), 10%) 0%, darken(rgb(199,109,215), 10%) 99%);
+    }
+
+    @include mobile300 {
+      width: 241px;
+      height: 42px;
+      font-size: 14px;
+      margin-bottom: 29px;
+    }
+
+    @include mobile400 {
+      width: 341px;
+      height: 47px;
+      font-size: 16px;
+      margin-bottom: 39px;
+    }
+  }
+
+  & ::-webkit-input-placeholder {
+    color: $color-form;
+  }
+
+  & ::-moz-placeholder {
+    color: $color-form;
+  }
+
+  & :-ms-input-placeholder {
+    color: $color-form;
+  }
+
+  & :-moz-placeholder {
+    color: $color-form;
+  }
+}
