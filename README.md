@@ -7,6 +7,10 @@ Technologies:
 * ```Gulp```, ```npm```
 * ```Photoshop```
 
+Tested on ```Chrome```, ```Firefox```, ```Opera```, ```Microsoft Edge```
+Not tested on ```Safari```
+```Internet Explorer``` has some bug to fix
+
 See the project here:
 https://monika-stempniak.github.io/PsdAssignment/
 
