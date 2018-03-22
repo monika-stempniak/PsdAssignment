@@ -1,0 +1,46 @@
+@mixin linearGradient($deg, $color-left, $color-right) {
+  background: $color-left;
+  background-image: linear-gradient($deg, $color-left, $color-right);
+  // background-image: -moz-linear-gradient($deg, $color-left, $color-right);
+  // background-image: -webkit-linear-gradient($deg, $color-left, $color-right);
+  // background-image: -ms-linear-gradient($deg, $color-left, $color-right);
+  // background-image: -o-linear-gradient($deg, $color-left, $color-right);
+}
+
+@mixin flex-box($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin boxShadow($x, $y, $blur, $spread, $color) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin photoWidthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin photo($photo-nr, $order) {
+  background-image: url("../src/images/foto-0#{$photo-nr}.png");
+  background-size: 100%;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  @include photoWidthHeight(100px, 100px);
+  border-radius: 50%;
+  overflow: hidden;
+  order: $order;
+}
+
+@mixin mobile300() {
+  @media (max-width: 399px) {
+    @content;
+  }
+}
+
+@mixin mobile400() {
+  @media (min-width: 400px) and (max-width: 490px) {
+    @content;
+  }
+}
