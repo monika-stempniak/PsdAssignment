@@ -1,10 +1,6 @@
 @mixin linearGradient($deg, $color-left, $color-right) {
   background: $color-left;
   background-image: linear-gradient($deg, $color-left, $color-right);
-  // background-image: -moz-linear-gradient($deg, $color-left, $color-right);
-  // background-image: -webkit-linear-gradient($deg, $color-left, $color-right);
-  // background-image: -ms-linear-gradient($deg, $color-left, $color-right);
-  // background-image: -o-linear-gradient($deg, $color-left, $color-right);
 }
 
 @mixin flex-box($justify-content, $align-items) {
