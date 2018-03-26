@@ -2,9 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const image = require('gulp-image');
 
-gulp.task('sass', function() {
-    return gulp.src('./src/scss/main.scss')
+gulp.task('sass', () => {
+    return gulp.src('./src/scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
@@ -14,7 +15,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./src/css'))
 });
 
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['sass'], () => {
     gulp.watch('./src/scss/*.scss', ['sass']);
 });
 
@@ -26,3 +27,11 @@ gulp.task('default', () =>
         }))
         .pipe(gulp.dest('dist'))
 );
+
+gulp.task('image', () => {
+    gulp.src('./src/images/*')
+      .pipe(image())
+      .pipe(gulp.dest('./dest'));
+  });
+   
+gulp.task('default', ['image']);
