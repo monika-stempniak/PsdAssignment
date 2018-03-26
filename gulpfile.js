@@ -19,7 +19,7 @@ gulp.task('watch', ['sass'], () => {
     gulp.watch('./src/scss/*.scss', ['sass']);
 });
 
-gulp.task('default', () =>
+gulp.task('prefix', () =>
     gulp.src('./src/css/main.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
