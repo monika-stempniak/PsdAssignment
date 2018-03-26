@@ -1,3 +1,7 @@
+html {
+  font-size: $base-font-size;
+}
+
 body {
   height: 100vh;
   @include linearGradient(48deg, rgb(201, 110, 215), rgb(48, 35, 174));

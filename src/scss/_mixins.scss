@@ -29,6 +29,21 @@
   order: $order;
 }
 
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  font-size: $font-size / $base-font-size + rem;
+}
+
+@mixin width($width) {
+  width: $width;
+  width: $width / $base-font-size + rem;
+}
+
+@mixin height($height) {
+  height: $height;
+  height: $height / $base-font-size + rem;
+}
+
 @mixin mobile300() {
   @media (max-width: 399px) {
     @content;
