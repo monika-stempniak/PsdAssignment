@@ -23,7 +23,7 @@
 }
 
 @mixin photo($photo-nr, $order) {
-  background-image: url("../src/images/foto-0#{$photo-nr}.png");
+  background-image: url("../../dest/foto-0#{$photo-nr}.png");
   background-size: 100%;
   background-position: center, center;
   background-repeat: no-repeat;
