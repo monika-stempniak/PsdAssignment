@@ -25,7 +25,7 @@
   @include width(367px);
   margin-bottom: 23px;
   @include flex-box(flex-start, center);
-  padding: 0 0 9px 6px;
+  padding: 0 0 7px 6px;
   position: relative;
 
   @include mobile300 {
@@ -37,11 +37,14 @@
     @include width(327px);
     margin-bottom: 18px;
   }
-}
 
-.form-email-icon {
-  display: block;
-  margin-right: 11px;
+  &::before {
+    content: '';
+    width: 21px;
+    height: 17px;
+    background: url("../../dest/email-icon.png");
+    margin: 0 11px 2px 0;
+  }
 }
 
 .form-email-input {
@@ -51,8 +54,9 @@
   font-size: 1rem;
   font-family: $font-lato;
   color: $color-title;
-  line-height: 1.2;
-  @include height(17px);
+  line-height: 1.5;
+  padding: 0 0 2px 0;
+  @include height(18px);
   transform: scale(1.02, 1);
 
   @include mobile300 {
@@ -70,11 +74,11 @@
   left: 34px;
   @include font-size(8px);
   color: red;
-  visibility: hidden;
+  display: none;
 }
 
 .visible {
-  visibility: visible;
+  display: block;
 }
 
 .btn-submit {
