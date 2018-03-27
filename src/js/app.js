@@ -7,16 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const validateForm = (event) => {
 
     let formIsValid = true;
-    const email = document.getElementById('email');
-    const errorMessage = document.querySelector('.error-message');
+    const emailInput = document.querySelector('.form-email-input');
+    const errorMessage = document.querySelector('.form-email-error');
     const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (!regexEmail.test(email.value)) {
+    if (!regexEmail.test(emailInput.value)) {
       formIsValid = false;
-      errorMessage.innerHTML = "Email is not valid";
+      errorMessage.classList.add('visible');
+    } else {
+      errorMessage.classList.remove('visible');
     }
 
-    if (formIsValid ===  false) {
+    if (formIsValid === false) {
       event.preventDefault();
     }
   }
